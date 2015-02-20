@@ -31,7 +31,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
-        android:id="@+id/radioGroup2"
+        android:id="@+id/cal"
         android:layout_below="@+id/textView3"
         android:layout_alignStart="@+id/textView2">
 
@@ -82,6 +82,6 @@
         android:text="Calculate"
         android:id="@+id/button3"
         android:layout_marginTop="46dp"
-        android:layout_below="@+id/radioGroup2"
-        android:layout_alignStart="@+id/radioGroup2" />
+        android:layout_below="@+id/cal"
+        android:layout_alignStart="@+id/cal" />
 </RelativeLayout>

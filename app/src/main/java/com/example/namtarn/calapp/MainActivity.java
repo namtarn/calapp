@@ -1,9 +1,11 @@
 package com.example.namtarn.calapp;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -11,7 +13,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main1);
     }
 
 
@@ -35,5 +37,30 @@ public class MainActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void buttonClicked(View v) {
+        int id = v.getId();
+        Intent i;
+
+        switch(id) {
+            case R.id.button:
+                i = new Intent(this, AddcalActivity.class);
+                //startActivityForResult(i, 88);
+                startActivity(i);
+                break;
+
+            case R.id.button2:
+                i = new Intent(this, ListuserActivity.class);
+                startActivity(i);
+                break;
+
+            case R.id.button5:
+                i = new Intent(this, AdduserActivity.class);
+                startActivity(i);
+                break;
+
+
+        }
     }
 }

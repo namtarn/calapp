@@ -16,6 +16,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".AdduserActivity"
+            android:label="Add user" >
+        </activity>
+        <activity
+        android:name=".AddcalActivity"
+        android:label="Cal" >
+    </activity>
+        <activity
+            android:name=".ListuserActivity"
+            android:label="list" >
+        </activity>
     </application>
 
 </manifest>

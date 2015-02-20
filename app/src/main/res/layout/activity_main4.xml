@@ -4,80 +4,150 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity"
-    android:background="#5efffcda">
+    android:background="#5efffcda"
+    >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User"
-        android:id="@+id/textView6"
-        android:textSize="30dp"
+        android:text="Add User"
+        android:id="@+id/textView"
+        android:textSize="25dp"
+        android:textColor="#f600000b"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name:"
-        android:id="@+id/textView7"
-        android:layout_marginTop="22dp"
-        android:textSize="18dp"
-        android:layout_below="@+id/textView6"
-        android:layout_alignParentStart="true" />
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/inname"
+        android:layout_marginTop="31dp"
+        android:layout_below="@+id/textView"
+        android:layout_toEndOf="@+id/textView9"
+        android:layout_marginStart="33dp" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Age:"
-        android:id="@+id/textView8"
-        android:textSize="18dp"
-        android:layout_alignTop="@+id/textView7"
-        android:layout_toStartOf="@+id/textView6" />
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/inage"
+        android:layout_below="@+id/inname"
+        android:layout_alignStart="@+id/inname" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Gender:"
-        android:id="@+id/textView9"
-        android:textSize="18dp"
-        android:layout_alignTop="@+id/textView8"
-        android:layout_toEndOf="@+id/textView6" />
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/inh"
+        android:layout_below="@+id/inage"
+        android:layout_alignStart="@+id/inage" />
 
-    <TextView
+    <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Height:"
-        android:id="@+id/textView10"
-        android:textSize="18dp"
-        android:layout_marginTop="27dp"
-        android:layout_below="@+id/textView7"
-        android:layout_alignParentStart="true" />
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:id="@+id/inw"
+        android:layout_below="@+id/inh"
+        android:layout_alignStart="@+id/inh" />
 
-    <TextView
-        android:layout_width="wrap_content"
+    <RadioGroup
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Weight:"
-        android:id="@+id/textView11"
-        android:textSize="18dp"
-        android:layout_alignBottom="@+id/textView10"
-        android:layout_alignStart="@+id/textView8" />
+        android:weightSum="1"
+        android:id="@+id/rg"
+        android:layout_marginBottom="40dp"
+        android:layout_above="@+id/button"
+        android:layout_alignParentStart="true">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hold tap to delete"
-        android:id="@+id/textView12"
-        android:textSize="20dp"
-        android:layout_marginBottom="73dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            android:id="@+id/radioButton"
+            android:checked="false"
+            android:layout_weight="0.23"
+            android:textSize="20dp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Female"
+            android:id="@+id/radioButton2"
+            android:checked="false"
+            android:textSize="20dp" />
+    </RadioGroup>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Back to main menu"
-        android:id="@+id/button5"
-        android:layout_marginBottom="20dp"
+        android:text="Calculate BMI and Calcorie"
+        android:id="@+id/button"
+        android:layout_above="@+id/button2"
+        android:layout_alignParentEnd="true"
+        android:onClick="buttonClicked1" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Show all user"
+        android:id="@+id/button2"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:onClick="buttonClicked1" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Name:"
+        android:id="@+id/textView7"
+        android:layout_above="@+id/inage"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Age:"
+        android:id="@+id/textView8"
+        android:textSize="20dp"
+        android:layout_above="@+id/inh"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Height:"
+        android:id="@+id/textView9"
+        android:textSize="20dp"
+        android:layout_above="@+id/inw"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Weight"
+        android:id="@+id/textView10"
+        android:textSize="20dp"
+        android:layout_alignBottom="@+id/inw"
+        android:layout_alignEnd="@+id/textView9" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Gender"
+        android:id="@+id/textView11"
+        android:textSize="20dp"
+        android:layout_above="@+id/rg"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>
